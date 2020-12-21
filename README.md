@@ -66,7 +66,7 @@ b. If the username is in use, reject the connection from that client.
 2. Logged commands will be presented to users. Users will have the ability to select any logged command and choose ‘Undo’.
 3. The effects of the command chosen for ‘Undo’, as well as the effects of any sequence-dependent operations, will be rolled back across all applicable systems.
 4. The command chosen for ‘Undo’, as well as any sequence-dependent commands, will be removed from the log.
-5. Return to Step 1 of ‘Logging’ until manually killed by the user.
+5. Return to Step 1 of ‘Logging’ until manually killed by the user.<br>
 <b>Notes:</b>
 • All three clients and the server may run on the same machine.
 • The server must correctly handle an unexpected client disconnection without crashing.
