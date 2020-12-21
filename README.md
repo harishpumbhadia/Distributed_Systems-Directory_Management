@@ -32,26 +32,26 @@ A user choosing to ‘Undo’ Operation 1 would necessarily ‘Undo’ Operation
 The developer should not assume sequence-dependent operations will be contiguous. Only one operation may be selected for ‘Undo’ at a time.
 
 
-The functionality for the clients and the server is summarized as follows.
-<b>Client</b>
-Startup
+The functionality for the clients and the server is summarized as follows.<br>
+<b>Client
+Startup</b>
 1. Prompt the user to input a username.
 2. Screen the username to ensure it does not contain illegal characters. How to address illegal characters is left to the developer’s discretion.
 3. Connect to the server over a socket and register the username.
 a. When the client is connected, the user should be notified of the active connection.
 b. If the provided username is already in use, the client should disconnect and prompt the user to input another username.
-4. Display a list of the available server directories and allow the user to select one or more server-based home directories to synchronize to the local system.
-Synchronization
+4. Display a list of the available server directories and allow the user to select one or more server-based home directories to synchronize to the local system.<br>
+<b>Synchronization</b>
 1. The client will automatically monitor the server for changes to the server-based home directory.
 2. Upon detecting changes to the server-based directory, the client will update the copy of the home directory in its LD to match the server-based home directory.
-3. Return to Step 1 of ‘Synchronization’ until manually terminated by the user.
-Directory Commands
+3. Return to Step 1 of ‘Synchronization’ until manually terminated by the user.<br>
+<b>Directory Commands</b>
 1. Proceed to accept directory commands from the user via the GUI.
 2. Display the output of those commands to the user via the GUI.
-3. Return to Step 1 of ‘Directory Commands’ until manually terminated by the user.
-Server
+3. Return to Step 1 of ‘Directory Commands’ until manually terminated by the user.<br>
+<b>Server</b>
 The server should support three concurrently connected clients. The server should indicate which of those clients are presently connected on its GUI.
-Startup
+<b>Startup</b>
 
 
 1. Listen for incoming connections.
@@ -60,14 +60,14 @@ a. If the client’s username is available (e.g., not currently being used by an
 b. If the username is in use, reject the connection from that client.
 3. Provide a home directory to the client (e.g., create a directory if necessary or use an extant directory).
 4. Proceed to accept and execute directory commands received from the client.
-5. Return to Step 1 of ‘Startup’ until manually killed by the user.
-Logging
+5. Return to Step 1 of ‘Startup’ until manually killed by the user.<br>
+<b>Logging</b>
 1. The server will log all directory commands executed on behalf of clients.
 2. Logged commands will be presented to users. Users will have the ability to select any logged command and choose ‘Undo’.
 3. The effects of the command chosen for ‘Undo’, as well as the effects of any sequence-dependent operations, will be rolled back across all applicable systems.
 4. The command chosen for ‘Undo’, as well as any sequence-dependent commands, will be removed from the log.
 5. Return to Step 1 of ‘Logging’ until manually killed by the user.
-Notes:
+<b>Notes:</b>
 • All three clients and the server may run on the same machine.
 • The server must correctly handle an unexpected client disconnection without crashing.
 • When a client disconnects from the server, the server GUI must indicate this to the user in real time.
