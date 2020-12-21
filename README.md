@@ -33,7 +33,7 @@ The developer should not assume sequence-dependent operations will be contiguous
 
 
 The functionality for the clients and the server is summarized as follows.
-Client
+<b>Client</b>
 Startup
 1. Prompt the user to input a username.
 2. Screen the username to ensure it does not contain illegal characters. How to address illegal characters is left to the developer’s discretion.
@@ -52,8 +52,8 @@ Directory Commands
 Server
 The server should support three concurrently connected clients. The server should indicate which of those clients are presently connected on its GUI.
 Startup
-CSE 5306 Lab # 3 Fall 2020
-ANY HONOR CODE VIOLATION WILL RESULT IN FAILING THE COURSE
+
+
 1. Listen for incoming connections.
 2. Print that a client has connected, and:
 a. If the client’s username is available (e.g., not currently being used by another client), fork a thread to handle that client; or,
