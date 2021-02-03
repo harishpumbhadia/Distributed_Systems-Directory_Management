@@ -1,8 +1,8 @@
-# Directory Management System
+# Distributed directory Management System
 
 ## Socket Programming in java
 
-You will write a centralized directory management system consisting of a server and three client processes. Each client process will connect to the server over a socket connection and register a username at the server. The server should be able to handle all three clients simultaneously and display the names of the connected clients in real time.
+You will write a distributed directory management system consisting of a server and three client processes. Each client process will connect to the server over a socket connection and register a username at the server. The server should be able to handle all three clients simultaneously and display the names of the connected clients in real time.
 Two or more clients may not use the same username simultaneously. Should the server detect a concurrent conflict in username, the client’s connection should be rejected, and the client’s user should be prompted to input a different name.
 Upon connection to the server, the server will check its local disk for a directory matching the client’s username. If a directory matching the client’s username does not exist, the server will create one. If a directory matching the client’s username already exists, the server will utilize the existing directory. This directory will be designated the client’s ‘home directory’.
 Inside the home directory, the client will have the ability to:
