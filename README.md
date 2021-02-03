@@ -1,4 +1,4 @@
-# Distributed directory Management System
+# Distributed Directory Management System
 
 ## Socket Programming in java
 
