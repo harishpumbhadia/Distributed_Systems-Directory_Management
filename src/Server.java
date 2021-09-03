@@ -1,6 +1,3 @@
-//Name: Harish Pumbhadia
-//Student ID: 1001773121
-
 import java.util.logging.*;
 import java.util.regex.Pattern;
 import java.awt.Dimension;
