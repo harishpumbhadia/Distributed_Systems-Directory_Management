@@ -1,6 +1,3 @@
-//Name: Harish Pumbhadia
-//Student ID: 1001773121
-
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.FileSystems;
